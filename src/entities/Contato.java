@@ -10,7 +10,7 @@ public class Contato {
     this.telefone = telefone;
     this.nome = nome;
     this.endereco = endereco;
-    this.id = this.id;
+    this.id = id;
    }
    
 

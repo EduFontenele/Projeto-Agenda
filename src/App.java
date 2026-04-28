@@ -11,14 +11,15 @@ public class App {
 
         int opc = -1;
        
-        while (opc != -1){
+        while (opc != 0){
             System.out.println("---------MENU---------");
             System.out.println("1. Adicionar Contato");
             System.out.println("2. Excluir Contato");
-            System.out.print("3. Visualizar Lista de Contatos");
+            System.out.println("3. Visualizar Lista de Contatos");
             System.out.println("0. Sair!");
 
             opc = scan.nextInt();
+            scan.nextLine();
 
             switch (opc) {
                 case 1:
@@ -27,11 +28,12 @@ public class App {
                         String nome = scan.nextLine();
                         System.out.println("Digite o Número de Telefone: ");
                         long telefone = scan.nextLong();
+                        scan.nextLine();
                         System.out.println("Digite o Endereço: ");
                         String endereco = scan.nextLine();
-                        scan.nextLine();
                         int id = contatos.size() + 1;
                         Contato novoContato = new Contato(telefone, nome, endereco, id);
+                        contatos.add(novoContato);
                     break;
                
                 case 2:
@@ -44,13 +46,22 @@ public class App {
                 
                 case 3:
                     System.out.println("-----LISTA DE CONTATOS-----");
-                    for (Contato c : contatos ){
+                    if (contatos.isEmpty()){
+                        System.out.println("Sua Lista de Contatos Esta Vazia!");
+                    }else{
+                        for (Contato c : contatos ){
                         System.out.println(c);
+                    }
+                    
                     }
                     break;
 
                 case 0:
                     System.out.print("Encerrando Programa");
+
+                default:
+                    System.out.println("Saindo do Sistema");
+                    break;
             }
         }
     
