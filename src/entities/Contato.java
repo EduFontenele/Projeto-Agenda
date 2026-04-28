@@ -4,12 +4,16 @@ public class Contato {
    private long telefone;
    private String nome;
    private String endereco;
+   private int id;
 
-   public Contato(long telefone, String nome, String endereco){
+   public Contato(long telefone, String nome, String endereco, int id){
     this.telefone = telefone;
     this.nome = nome;
     this.endereco = endereco;
+    this.id = this.id;
    }
+
+   
 
    public long getTelefone() {
     return telefone;
@@ -36,5 +40,4 @@ public class Contato {
    }
 
    
-
 }
