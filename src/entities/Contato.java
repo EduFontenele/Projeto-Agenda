@@ -12,7 +12,6 @@ public class Contato {
     this.endereco = endereco;
     this.id = this.id;
    }
-
    
 
    public long getTelefone() {
@@ -39,5 +38,15 @@ public class Contato {
     this.endereco = endereco;
    }
 
+   public int getId(){
+    return id;
+   }
+
+   @Override
+   public String toString(){
+    return "ID: " + id + "| Nome: " + nome + "| Telefone: " + telefone + "| Endereço: " + endereco;
+   }
+
    
+
 }

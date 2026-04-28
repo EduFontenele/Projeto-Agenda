@@ -32,8 +32,26 @@ public class App {
                         scan.nextLine();
                         int id = contatos.size() + 1;
                         Contato novoContato = new Contato(telefone, nome, endereco, id);
+                    break;
+               
+                case 2:
+
+                System.out.print("Digite o ID do Contato a Ser Excluido");
+                int exclusao = scan.nextInt();
+                contatos.removeIf(excluirid -> excluirid.getId()== exclusao);
+                System.out.println("Contato Removido");
+                    break;
+                
+                case 3:
+                    System.out.println("-----LISTA DE CONTATOS-----");
+                    for (Contato c : contatos ){
+                        System.out.println(c);
+                    }
+                    break;
+
+                case 0:
+                    System.out.print("Encerrando Programa");
             }
-            
         }
     
     }
