@@ -1,0 +1,20 @@
+# --- Java ---
+*.class
+*.jar
+*.war
+*.ear
+bin/
+build/
+target/
+
+# --- VS Code ---
+.vscode/
+.history/
+*.code-workspace
+
+# --- SO e Outros ---
+.DS_Store
+thumbs.db
+.settings/
+.project
+.classpath
